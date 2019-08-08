@@ -1,0 +1,244 @@
+<html>
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="animate.css" type="text/css">
+  <link href="payment.css" rel="stylesheet" type="text/css"  />
+  
+
+  
+  <div id="mydiv"></div>
+ 
+
+<script type="text/babel">
+
+
+class App extends React.Component {
+  constructor(props){
+  super(props);
+  this.state={
+  pay:" ",
+}
+  }
+  
+  set(e)
+  {
+    
+    this.setState({
+    pay:e.target.value
+  })
+  
+  }
+  subComponent(){
+  
+    if(this.state.pay=="debitcard")
+    return (<div class="a" align="center"> 
+                  
+                      
+                      <h3 class="pay-title">Dedit Card Info</h3>
+                      <form>
+                              
+                          <h5>NAME ON CARD</h5>
+                            <input type="text" name="debitcard_name" required/>
+                          <h5>CARD NUMBER</h5>                          
+                            <input class="pay-logo" type="text"  name="debit_card_no" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"required/>
+                        
+                            <h5>EXPIRATION</h5>
+                              
+                                  <input type="date" class="text_box" name="debitcard_expiration_date" required /> 
+                                
+                                  
+                                
+                                
+                              
+                            <h5>CVV NUMBER</h5>                         
+                            <input type="text" pattern="[0-9]{3}" id="n" name="cvv_no_debit" required/><br/><br/>
+                          
+                          
+                        
+                      
+                      
+                          
+                              <input type="checkbox"  id="brand" value=""/>
+                              <label for="brand">By checking this box, I agree to the Terms & Conditions & Privacy Policy.</label>
+                            </form>
+                            
+                    </div>  );
+  }
+  subComponent1(){
+    if(this.state.pay=="creditcard")
+    return (<div class="a" align="center">
+                      <h3>Personal Information</h3>
+                      <form>   
+                          <h5>EMAIL ADDRESS</h5>
+                            <input type="text" name="email" required/>
+                          <h5>FIRST NAME</h5>                         
+                            <input type="text" name="first_name" required />
+                        
+                      <h3 class="pay-title">Credit Card Info</h3>
+                      
+                          <h5>NAME ON CARD</h5>
+                            <input type="text" name="credi_card_name" required/>
+                          <h5>CARD NUMBER</h5>                          
+                            <input class="pay-logo" type="text" name="credi_card_no" required/>                        
+                            <h5>EXPIRATION</h5>
+                             
+                                  <input type="date" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" name="credit_card_expiration" required />  
+                                                                                
+                            <h5>CVV NUMBER</h5>                         
+                            <input type="text" pattern="[0-9]{3}" name="credit_card_cvv" required/><br/><br/>
+                      
+                          
+                        
+                                  
+                              <input type="checkbox"  id="brand" value=""/>
+                      
+                              <label for="brand">By checking this box, I agree to the Terms & Conditions & Privacy Policy.</label>
+                            
+                     </form>
+                  </div> );
+  
+  }
+  subComponent2(){
+  
+  
+    if(this.state.pay=="netbanking")
+    return (<div class="a" align="center">
+                      <h3>Net Banking</h3>
+                                  
+                           <div class="check_box"> <div class="radio"><label><input type="radio" name="radio" checked=""/><i></i>Andhra Bank</label></div></div>
+                          <div class="check_box"> <div class="radio"><label><input type="radio" name="radio"/><i></i>Allahabad Bank</label></div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Bank of Baroda</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Canara Bank</label> </div></div> 
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>IDBI Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Icici Bank</label> </div></div>  
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Indian Overseas Bank</label> </div></div>  
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Punjab National Bank</label> </div></div>  
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>South Indian Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>State Bank Of India</label> </div></div>   
+                        
+                        <div class="swit">                
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio" checked=""/><i></i>City Union Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>HDFC Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>IndusInd Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Syndicate Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Deutsche Bank</label> </div></div> 
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Corporation Bank</label> </div></div>
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>UCO Bank</label> </div></div>  
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Indian Bank</label> </div></div> 
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>Federal Bank</label> </div></div>  
+                          <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"/><i></i>ING Vysya Bank</label> </div></div>  
+                        </div>
+                        
+                      
+                      <a href="#">Continue</a>
+                    
+                  </div>);
+  
+  }
+  subComponent3(){
+      if(this.state.pay=="paypal")
+    return ( <div class="a" align="center">                   
+                      <h3>PayPal</h3>
+                      <h4>Already Have A PayPal Account?</h4>
+                      
+                        
+                          <h2>Login</h2>
+                          
+                          <form>
+                            <input type="text" value="name@email.com" name="paypal_account"required/>
+                            <h2>Password</h2>
+                            <input type="password" name="account_password" required/><br/><br/>
+                      
+                             
+                                          <input type="checkbox"  id="brand1" value=""/>
+                                          <label for="brand1"><span></span>Remember me?</label><br/><br/>
+                      
+                                        
+
+                                 
+                                </form>
+                            
+                                
+                              
+                  </div>);
+  
+  }
+  
+  
+  render() {
+    return ( 
+    <div >
+    <h1 class="animated flash">PAYMENT METHOD</h1>
+    <form>
+      <div class="container">
+         
+              <div class="row">
+       <div class=" col-md-2 col-md-offset-4">
+        <input type="radio" value="debitcard" name="g" onChange={this.set.bind(this)} /><label for="one">DEBITCARD</label>
+         </div>
+         <div class=" col-md-1 ">
+        <img src="images/visa.png"/>
+      </div>
+        
+        <br/>
+         {this.subComponent()}
+      </div>
+        <div class="row">
+       <div class=" col-md-2 col-md-offset-4">
+        <input type="radio" value="creditcard" name="g" onChange={this.set.bind(this)}/><label for="one">CREDITCARD</label></div>
+         <div class="col-md-1 col-md-offset-0">
+        <img src="images/pic2.png"/></div>
+         
+        <br/>
+        
+        {this.subComponent1()}
+      </div>
+       <div class="row">
+       <div class="col-md-2 col-md-offset-4">
+        <input type="radio" value="netbanking" name="g" onChange={this.set.bind(this)}/><label for="one">NET BANKING</label></div>
+        <div class="col-md-1 col-md-offset-0">
+        <img src="images/pic1.png"/></div>
+        <br/>
+        
+        {this.subComponent2()}
+        </div>
+        <div class="row">
+       <div class="col-md-2 col-md-offset-4">
+        <input type="radio" value="paypal" name="g" onChange={this.set.bind(this)}/><label for="one">PAY PAL</label></div>
+        <div class="col-md-1 col-md-offset-0">
+        <img src="images/pic4.png"/></div>
+        
+        <br/>
+        
+        {this.subComponent3()}
+       </div>
+       </div>
+     <input type="submit" value="SUBMIT"/><br/>
+   </form>
+   
+ </div>
+        
+      
+        
+     
+     )
+  }
+}
+ReactDOM.render(<App/>, document.getElementById('mydiv'));
+
+
+
+</script>
+
+  </body>
+</html>

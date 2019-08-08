@@ -1,0 +1,32 @@
+{
+  "name": "e-commerce-tcs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivuMarcus/EcommerceTCS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DivuMarcus/EcommerceTCS/issues"
+  },
+  "homepage": "https://github.com/DivuMarcus/EcommerceTCS#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bcrypt-nodejs": "0.0.3",
+    
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-mate": "^2.0.3",
+    "mongoose": "^5.2.15",
+    "morgan": "^1.9.1",
+    "schema": "^0.2.1"
+  }
+}

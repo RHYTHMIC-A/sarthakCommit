@@ -1,0 +1,1 @@
+bcrypt3.0.6bcrypt-nodejs0.0.3body-parser1.19.0ejs2.6.2ejs-mate3.0.0 express4.17.1express-mate2.0.3mongoose5.2.15morgan1.9.1schema0.2.1
